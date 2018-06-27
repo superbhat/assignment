@@ -8,12 +8,25 @@ Run
 
 To compile and test the application:
 
-Gradle clean assemble -- this will create the jar file.
-
-To run the application:
-
-Login to terminal and give below command
+Create the jar file if using gradle follow below steps
+Step 1 - Open terminal/CD prompt
+Step 2 - copy the project from GitHub to ur folder
+Step 3 - go to cd prompt and go to the directory where you copied the project
+Step 4 - run - gradle clean assemble -- this will create a jar file in build folder, go to builder and then to lib and copy that jar
+Step 5 - if Hadoop is installed please run below command
 /bin/spark-submit --class weatther.app.weather --master local <jar file name>
+
+Else if gradle is not installed 
+Please download the jar file from the project in the GitHub.
+And directly run the jar file using below command
+/bin/spark-submit --class weatther.app.weather --master local base-engine-1.0-SNAPSHOT
+In this case jar file name is base-engine-1.0-SNAPSHOT.jar
+
+Else 
+Copy the code directly to eclipse, then right click on the project, go to the property and select scala compiler and change the scala installation to 2.10 bundle
+Scala version is 2.10
+And then run the application using run as scala application.
+
 
 Requirements
 
